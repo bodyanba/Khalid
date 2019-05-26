@@ -211,16 +211,35 @@ h4, .h4
 	transition: $transition
 	padding-top: 20px
 	padding-bottom: 20px
-	&.navbar-bg
-		background-color: #000
 	.logo
 		max-width: 70%
+		position: relative
+		img 
+			transition: $transition
+			&.logo-white
+				opacity: 0
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
 	@media (min-width: 991.98px)
 		align-items: inherit
 		padding: 0 0 0 100px
 		.logo 
 			margin-top: 40px
 			margin-bottom: 40px
+	&.navbar-bg
+		background-color: #000
+		.logo
+			img 
+				opacity: 0
+				&.logo-white
+					opacity: 1
+		@media (min-width: 991.98px)
+			.logo 
+				margin-top: 20px
+				margin-bottom: 20px
 
 .menubar
 	position: fixed
@@ -365,6 +384,9 @@ h4, .h4
 		border: 65px solid #fff
 		border-bottom-color: transparent
 		border-left-color: transparent
+		.navbar-bg &
+			border-color: transparent
+			border-width: 67px 65px 23px
 	.sandwich
 		display: inline-block
 		cursor: pointer
@@ -397,6 +419,8 @@ h4, .h4
 			animation-timing-function: linear
 			animation-iteration-count: infinite
 			animation-duration: 3s
+			.navbar-bg &
+				background-color: #fff
 			@media (max-width: 991.98px)
 				background-color: #fff
 		&:hover

@@ -699,10 +699,18 @@ h4, .h4 {
   transition: 0.3s;
   padding-top: 20px;
   padding-bottom: 20px; }
-  .navbar.navbar-bg {
-    background-color: #000; }
   .navbar .logo {
-    max-width: 70%; }
+    max-width: 70%;
+    position: relative; }
+    .navbar .logo img {
+      transition: 0.3s; }
+      .navbar .logo img.logo-white {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; }
   @media (min-width: 991.98px) {
     .navbar {
       align-items: inherit;
@@ -710,6 +718,16 @@ h4, .h4 {
       .navbar .logo {
         margin-top: 40px;
         margin-bottom: 40px; } }
+  .navbar.navbar-bg {
+    background-color: #000; }
+    .navbar.navbar-bg .logo img {
+      opacity: 0; }
+      .navbar.navbar-bg .logo img.logo-white {
+        opacity: 1; }
+    @media (min-width: 991.98px) {
+      .navbar.navbar-bg .logo {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
 
 .menubar {
   position: fixed;
@@ -860,7 +878,10 @@ h4, .h4 {
     .sandwich-wrap {
       border: 65px solid #fff;
       border-bottom-color: transparent;
-      border-left-color: transparent; } }
+      border-left-color: transparent; }
+      .navbar-bg .sandwich-wrap {
+        border-color: transparent;
+        border-width: 67px 65px 23px; } }
   .sandwich-wrap .sandwich {
     display: inline-block;
     cursor: pointer;
@@ -894,6 +915,8 @@ h4, .h4 {
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-duration: 3s; }
+      .navbar-bg .sandwich-wrap .sandwich span, .navbar-bg .sandwich-wrap .sandwich:before, .navbar-bg .sandwich-wrap .sandwich:after {
+        background-color: #fff; }
       @media (max-width: 991.98px) {
         .sandwich-wrap .sandwich span, .sandwich-wrap .sandwich:before, .sandwich-wrap .sandwich:after {
           background-color: #fff; } }
