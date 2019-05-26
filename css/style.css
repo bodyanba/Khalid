@@ -635,7 +635,8 @@ h4, .h4 {
 
 .scroll-icon {
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  width: 175px; }
   @media (max-width: 1199.98px) {
     .scroll-icon {
       display: none; } }
@@ -1027,12 +1028,25 @@ h4, .h4 {
     opacity: 0;
     top: 12px; } }
 .section-1 {
-  padding: 91px 0 244px; }
+  padding: 91px 0 244px;
+  position: relative; }
+  @media (min-width: 1200px) {
+    .section-1:before {
+      content: "";
+      position: absolute;
+      right: 40px;
+      top: 130px;
+      width: 350px;
+      height: 350px;
+      background-image: url(../img/circle.svg);
+      background-size: cover;
+      animation: circle 74s infinite linear; } }
   .section-1 .scroll-icon-wrap {
     z-index: -1; }
     .section-1 .scroll-icon-wrap .scroll-icon {
       transform: translate(0, -50%);
-      animation: scrollIcon linear infinite 6s; }
+      animation: scrollIcon linear infinite 6s;
+      width: auto; }
   .section-1 .block {
     color: #fff;
     background-color: #e93e1b;
@@ -1097,7 +1111,7 @@ h4, .h4 {
     .section-3 .container-fluid > .row > .col {
       padding-top: 40px; } }
   .section-3 .scroll-icon {
-    right: 40px;
+    right: 0;
     top: 208px;
     z-index: -1; }
   .section-3 .scroll-icon-wrap .scroll-icon {
@@ -1113,6 +1127,12 @@ h4, .h4 {
   padding: 140px 0;
   background-color: #eaebeb;
   position: relative; }
+  @media (min-width: 1200px) {
+    .section-4 {
+      background-image: url(../img/dots-2.svg);
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      background-size: 300px; } }
   .section-4 .block-wrap {
     position: relative; }
     @media (min-width: 576px) {
@@ -1431,11 +1451,22 @@ h4, .h4 {
   padding: 140px 0;
   background-color: #eaebeb;
   position: relative; }
-  .section-6 .scroll-icon {
-    left: 53px; }
   @media (max-width: 1199.98px) {
     .section-6 {
       padding: 70px 0; } }
+  .section-6 .scroll-icon {
+    left: 53px; }
+  @media (min-width: 1200px) {
+    .section-6:before {
+      content: "";
+      position: absolute;
+      right: 40px;
+      top: 130px;
+      width: 300px;
+      height: 300px;
+      background-image: url(../img/circle.svg);
+      background-size: cover;
+      animation: circle 74s infinite linear; } }
 
 .card-my {
   background-color: #fff;
@@ -1458,6 +1489,10 @@ h4, .h4 {
 .section-7 {
   padding: 140px 0;
   position: relative; }
+  @media (min-width: 1200px) {
+    .section-7 {
+      background: url(../img/dots.svg) no-repeat calc(100% - 50px) 100px;
+      background-size: 400px; } }
   .section-7 .row:not(.no-gutters) {
     margin-left: -8px;
     margin-right: -8px; }
@@ -1496,6 +1531,14 @@ h4, .h4 {
   color: #fff !important;
   background-position: center;
   background-size: cover; }
+  @media (max-width: 1499.98px) {
+    .item {
+      font-size: 26px;
+      padding: 150px 42px 20px; } }
+  @media (max-width: 1199.98px) {
+    .item {
+      font-size: 24px;
+      padding: 170px 26px 6px; } }
   .item:before {
     content: "";
     position: absolute;
@@ -1519,19 +1562,29 @@ h4, .h4 {
   .item > * {
     position: relative;
     z-index: 9; }
-  @media (max-width: 1499.98px) {
-    .item {
-      font-size: 26px;
-      padding: 150px 42px 20px; } }
-  @media (max-width: 1199.98px) {
-    .item {
-      font-size: 24px;
-      padding: 170px 26px 6px; } }
+  @media (min-width: 1200px) {
+    [class*="col"]:first-child > .item:after {
+      content: "";
+      position: absolute;
+      top: -225px;
+      left: -225px;
+      width: 450px;
+      height: 450px;
+      background-image: url(../img/circle.svg);
+      background-size: cover;
+      animation: circle 74s infinite linear;
+      z-index: -1; } }
 
+@keyframes circle {
+  100% {
+    transform: rotate(360deg); } }
 .section-8 {
   padding: 100px 0;
   overflow: hidden;
   position: relative; }
+  @media (max-width: 1199.98px) {
+    .section-8 {
+      padding: 70px 0; } }
   .section-8:before {
     content: "";
     position: absolute;
@@ -1550,9 +1603,6 @@ h4, .h4 {
     position: relative; }
   .section-8 .owl-stage-outer {
     overflow: visible; }
-  @media (max-width: 1199.98px) {
-    .section-8 {
-      padding: 70px 0; } }
 
 .page-footer {
   color: #cacaca;
