@@ -1,0 +1,328 @@
+@media (min-width: 576px)
+
+@media (min-width: 768px)
+	.squares-menu
+		li
+			&:nth-child(n+4)
+				a
+					&:before 
+						border: 2px solid
+						border-right: 0
+						border-bottom: 0
+						bottom: auto
+						right: auto
+						top: 102%
+						left: 102%
+					> span 
+						.tab-name
+							top: auto
+							bottom: -170px
+					&:hover
+						&:before 
+							top: 100%
+							left: 100%
+						> span 
+							.tab-name
+								bottom: -160px
+
+	.modal-dialog
+		width: 701px
+	.modal-content
+		min-height: 701px
+		.apply-title
+			margin-top: 105px
+
+@media (min-width: 992px)
+	.container
+		padding-left: 20px
+		padding-right: 20px
+		width: 960px
+
+	.container-clear
+		margin-left: -20px
+		margin-right: -20px
+
+	.slide
+		> .row
+			display: flex
+			
+@media (min-width: 1200px)
+	.navbar-fixed-top
+		padding-left: 15px
+		padding-right: 15px
+
+	.map
+		margin-top: 50px
+		max-width: initial
+
+@media (min-width: 1700px)
+	.navbar-fixed-top
+		padding-left: 63px
+		padding-right: 37px
+	.navbar
+		.nav
+			> li
+				> a 
+					font-size: 20px
+
+
+
+@media (max-width: 1699px)
+	.navbar
+		.nav
+			> li
+				> a 
+					margin: 29px 12px
+	.navbar-brand
+		max-width: 300px
+	.sandwich
+		margin-top: 40px
+		margin-bottom: 40px
+
+	.social-media-wrap
+		width: 50px
+		left: 20px
+		li 
+			a 
+				height: 50px
+				padding: 7px
+				background-size: cover
+
+@media (max-width: 1199px)
+	.fz-120
+		font-size: 54px
+	.fz-100
+		font-size: 50px
+	.fz-72
+		font-size: 40px
+	.fz-60
+		font-size: 34px
+	.fz-48
+		font-size: 30px
+	.fz-36
+		font-size: 28px
+	.fz-32
+		font-size: 24px
+	.fz-30
+		font-size: 22px
+	.fz-24
+		font-size: 20px
+
+	.navbar
+		.nav
+			> li
+				> a 
+					font-size: 16px
+					margin: 11px 8px
+	.navbar-brand
+		max-width: 220px
+		padding-right: 5px
+		padding-top: 10px
+		padding-bottom: 10px
+	.sandwich
+		margin: 22px 0
+		margin-left: 20px
+		transform: scale(1.4, 1.2)
+
+	.timer
+		width: 100px
+		height: 100px
+
+	.story-item
+		.story-footer
+			padding: 15px
+
+	.squares-menu
+		li
+			margin: -31px 42px
+			a 
+				> span
+					width: 200px
+					height: 200px
+					background-origin: content-box
+					background-size: cover
+					padding: 15%
+					&:before 
+						font-size: 36px
+
+	.calendar-block
+		.calendar-item-wrap
+			.calendar-item
+				.text 
+					padding: 3px 15px
+					.fz-36
+						margin-top: 10px
+			.calendar-title
+				padding: 15px
+
+	.i 
+		width: 30px
+		height: 30px
+		left: 15px
+		bottom: 15px
+
+@media (max-width: 991px)
+	.navbar-fixed-top
+		background-color: #f5f5f5
+
+	.sandwich
+		opacity: 1 !important
+		visibility: visible !important
+		transform: none
+		span, &:before, &:after
+			background-color: $color-orange
+		&.active 
+			span, &:before, &:after
+				width: 97%
+				left: 15%
+			&:before
+				transform: rotate(45deg)
+			span
+				opacity: 0
+			&:after
+				transform: rotate(-45deg)
+	#menubar
+		width: 260px
+		right: -262px
+		position: fixed
+		top: 0
+		bottom: 0
+		z-index: -1
+		padding: 65px 15px 15px
+		overflow: auto
+		margin: 0	
+		background-color: #f5f5f5
+		transition: right .2s ease-in-out
+		transform: none
+		li 
+			float: none
+			a 
+				margin: 0
+
+	header.main-header, main, footer.page-footer
+		transition: transform .2s ease-in-out
+	body.menubar-in 
+		height: 100%
+		overflow: hidden
+		header.main-header, main, footer.page-footer
+			transform: translateX(-260px)
+			overflow: hidden
+		#menubar
+			right: 0
+
+	section.section-19
+		.col-wrap
+			.left-col, .right-col
+				padding: 45px 15px
+
+	.slide-wrap
+		margin-top: 10px
+
+	#scroll-top
+		right: 15px
+
+	.date-box
+		.overlay
+			.centered
+				padding-bottom: 40px
+		.date-descr
+			padding: 3px 15px
+
+	#accordion
+		.step-body
+			padding-top: 60px
+			padding-bottom: 60px
+
+	.apply-menu, .faq-menu
+		overflow: auto
+		li 
+			a
+				&:after
+					display: none
+
+	.faq-menu
+		li
+			a 
+				border-bottom-width: 4px
+				padding-top: 6px
+				padding-bottom: 5px
+				&:before
+					width: 60.5px
+					height: 46px
+					margin-bottom: 0
+
+	.squares-menu
+		li
+			margin: -24px 36px
+			a 
+				> span
+					width: 160px
+					height: 160px
+					&:before 
+						font-size: 36px
+
+	.calendar-block
+		.calendar-item-wrap
+			width: 33.33333333%
+			&.ciw
+				width: 33.33333333%
+
+@media (max-width: 767px)
+	.apply-title
+		&:before, &:after
+			display: none
+
+	.squares-menu
+		padding-top: 0
+		padding-bottom: 100px
+		li
+			margin: 200px 0 0
+			display: block
+			a 
+				display: inline-block
+				> span
+					width: 200px
+					height: 200px
+					.tab-name
+						top: -135px
+				&:hover
+					> span
+						.tab-name
+							top: -125px
+
+	.modal-content
+		padding: 15px 15px 30px
+
+@media (max-width: 575px)
+
+@media (max-width: 1050px)
+	.hexagon
+		font-size: 350px
+
+@media (max-width: 766px)
+	.hexagons
+		padding: 0
+
+	.hexagon
+		margin: .25em 4px
+
+@media (max-width: 650px)
+	.calendar-block
+		.calendar-item-wrap
+			width: 50%
+			&.ciw
+				width: 50%
+
+@media (max-width: 430px)
+	.calendar-block
+		.calendar-item-wrap
+			width: 100%
+			&.ciw
+				width: 100%
+
+@media (max-width: 350px)
+	.hexagon
+		font-size: 280px
+		.centered
+			padding: 0 15px
+			font-size: 18px
