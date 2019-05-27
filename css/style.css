@@ -953,9 +953,6 @@ h4, .h4 {
   text-align: center;
   position: relative;
   overflow: hidden; }
-  @media (max-width: 991.98px) {
-    .main-header {
-      padding-bottom: 100px; } }
   .main-header:after {
     content: "";
     position: absolute;
@@ -976,12 +973,16 @@ h4, .h4 {
     object-fit: cover; }
   .main-header .container {
     min-height: 100vh;
+    padding-top: 150px;
     padding-bottom: 230px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
     z-index: 5; }
+    @media (max-width: 991.98px) {
+      .main-header .container {
+        padding-bottom: 100px; } }
   .main-header .first, .main-header .second {
     opacity: 0;
     transition: 0.5s; }
@@ -1034,10 +1035,11 @@ h4, .h4 {
     .section-1:before {
       content: "";
       position: absolute;
-      right: 40px;
+      right: 80px;
       top: 130px;
       width: 350px;
       height: 350px;
+      border-radius: 50%;
       background-image: url(../img/circle.svg);
       background-size: cover;
       animation: circle 74s infinite linear; } }
@@ -1050,7 +1052,7 @@ h4, .h4 {
   .section-1 .block {
     color: #fff;
     background-color: #e93e1b;
-    padding: 124px 90px 55px 80px;
+    padding: 80px 90px 55px 80px;
     margin-top: -347px;
     position: relative; }
     .section-1 .block .scroll-icon {
@@ -1059,7 +1061,7 @@ h4, .h4 {
       z-index: -1; }
     @media (max-width: 1499.98px) {
       .section-1 .block {
-        padding: 100px 50px 24px; } }
+        padding: 50px 50px 24px; } }
     @media (max-width: 1199.98px) {
       .section-1 .block {
         margin-top: -200px; } }
@@ -1069,12 +1071,7 @@ h4, .h4 {
     @media (max-width: 575.98px) {
       .section-1 .block {
         margin-top: -50px;
-        padding: 75px 20px 10px; } }
-  .section-1 .quotes {
-    font-size: 100px;
-    font-family: Sathu;
-    line-height: 0;
-    margin-left: -8px; }
+        padding: 30px 20px 10px; } }
   @media (max-width: 1199.98px) {
     .section-1 {
       padding: 70px 0; } }
@@ -1236,7 +1233,8 @@ h4, .h4 {
         width: 50px;
         margin: 0;
         border-bottom: 1px solid #000;
-        transition: 0.3s; }
+        transition: 0.3s;
+        border-radius: 0; }
         .owl-carousel .owl-dots .owl-dot span:hover {
           border-bottom-width: 3px; }
       .owl-carousel .owl-dots .owl-dot.active {
@@ -1460,7 +1458,7 @@ h4, .h4 {
     .section-6:before {
       content: "";
       position: absolute;
-      right: 40px;
+      right: 70px;
       top: 130px;
       width: 300px;
       height: 300px;
@@ -1491,8 +1489,11 @@ h4, .h4 {
   position: relative; }
   @media (min-width: 1200px) {
     .section-7 {
-      background: url(../img/dots.svg) no-repeat calc(100% - 50px) 100px;
-      background-size: 400px; } }
+      background: url(../img/dots.svg) no-repeat calc(100% - 30px) 100px;
+      background-size: 200px; } }
+  @media (min-width: 1500px) {
+    .section-7 {
+      background-size: 300px; } }
   .section-7 .row:not(.no-gutters) {
     margin-left: -8px;
     margin-right: -8px; }
@@ -1593,7 +1594,8 @@ h4, .h4 {
     left: 0;
     width: 45%;
     background-color: #f4f6f8;
-    background-image: url(../img/instagram.svg);
+    background-image: url(../img/instagram.png);
+    background-size: 172px;
     background-position: calc(100% - 69px) 100px;
     background-repeat: no-repeat; }
     @media (max-width: 575.98px) {

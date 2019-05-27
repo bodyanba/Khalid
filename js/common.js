@@ -18,6 +18,8 @@ $(document).ready(function () {
     smartSpeed: 1000,
     margin: 20,
     dots: false,
+    autoplay: true,
+    loop: true,
     nav: true,
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
     onInitialized: function(e) {
@@ -26,7 +28,13 @@ $(document).ready(function () {
     },
   });
   owl3.on('changed.owl.carousel', function(e) {
-    owlIndex.attr("data-index", e.item.index + 1);
+    var index = e.item.index + 1;
+    if (index == 4) {
+      index = 1
+    } else if (index == 5) {
+      index = 2
+    };
+    owlIndex.attr("data-index", index);
   });
 
   $(".owl-4").owlCarousel({
@@ -97,7 +105,6 @@ $(document).ready(function () {
       });
       a = 1;
     }
-
   });
 
 });

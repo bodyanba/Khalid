@@ -457,8 +457,6 @@ h4, .h4
 	text-align: center
 	position: relative
 	overflow: hidden
-	@media (max-width: 991.98px)
-		padding-bottom: 100px
 	&:after  
 		content: ''
 		position: absolute
@@ -479,12 +477,15 @@ h4, .h4
 		object-fit: cover
 	.container
 		min-height: 100vh
+		padding-top: 150px
 		padding-bottom: 230px
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
 		position: relative
 		z-index: 5
+		@media (max-width: 991.98px)
+			padding-bottom: 100px
 	.first, .second
 		opacity: 0
 		transition: .5s
@@ -538,10 +539,11 @@ h4, .h4
 		&:before
 			content: ''
 			position: absolute
-			right: 40px
+			right: 80px
 			top: 130px
 			width: 350px
 			height: 350px
+			border-radius: 50%
 			background-image: url(../img/circle.svg)
 			background-size: cover
 			animation: circle 74s infinite linear
@@ -554,7 +556,7 @@ h4, .h4
 	.block
 		color: #fff
 		background-color: $color-danger
-		padding: 124px 90px 55px 80px
+		padding: 80px 90px 55px 80px
 		margin-top: -347px
 		position: relative
 		.scroll-icon
@@ -562,19 +564,14 @@ h4, .h4
 			bottom: calc(100% + 167px)
 			z-index: -1
 		@media (max-width: 1499.98px)
-			padding: 100px 50px 24px
+			padding: 50px 50px 24px
 		@media (max-width: 1199.98px)
 			margin-top: -200px
 		@media (max-width: 767.98px)
 			margin-top: -100px
 		@media (max-width: 575.98px)
 			margin-top: -50px
-			padding: 75px 20px 10px
-	.quotes
-		font-size: 100px
-		font-family: Sathu
-		line-height: 0
-		margin-left: -8px
+			padding: 30px 20px 10px
 	@media (max-width: 1199.98px)
 		padding: 70px 0
 	@media (max-width: 575.98px)
@@ -730,6 +727,7 @@ h4, .h4
 				margin: 0
 				border-bottom: 1px solid #000
 				transition: $transition
+				border-radius: 0
 				&:hover 	
 					border-bottom-width: 3px
 			&.active
@@ -946,7 +944,7 @@ h4, .h4
 		&:before
 			content: ''
 			position: absolute
-			right: 40px
+			right: 70px
 			top: 130px
 			width: 300px
 			height: 300px
@@ -975,8 +973,10 @@ h4, .h4
 	padding: 140px 0
 	position: relative
 	@media (min-width: 1200px)
-		background: url(../img/dots.svg) no-repeat calc(100% - 50px) 100px
-		background-size: 400px
+		background: url(../img/dots.svg) no-repeat calc(100% - 30px) 100px
+		background-size: 200px
+	@media (min-width: 1500px)
+		background-size: 300px
 	.row:not(.no-gutters)
 		margin-left: -8px
 		margin-right: -8px
@@ -1072,7 +1072,8 @@ h4, .h4
 		left: 0
 		width: 45%
 		background-color: $color-bg
-		background-image: url(../img/instagram.svg)
+		background-image: url(../img/instagram.png)
+		background-size: 172px
 		background-position: calc(100% - 69px) 100px
 		background-repeat: no-repeat
 		@media (max-width: 575.98px)
