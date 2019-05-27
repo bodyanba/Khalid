@@ -33,6 +33,8 @@ $(document).ready(function () {
       index = 1
     } else if (index == 5) {
       index = 2
+    } else if (index == 6) {
+      index = 3
     };
     owlIndex.attr("data-index", index);
   });
