@@ -18,59 +18,59 @@
     
       <nav class="navbar fixed-top">
         <a class="logo" href="index.html">
-          <img src="img/logo.png" alt="">
-          <img src="img/logo-white.png" alt="" class="logo-white">
+          <img src="img/logo.svg" alt="">
+          <img src="img/logo-white.svg" alt="" class="logo-white">
         </a>
         <div class="menubar">
           <div class="navbar">
-            <a class="logo" href="index.html"><img src="img/logo-white.png" alt=""></a>
+            <a class="logo" href="index.html"><img src="img/logo-white.svg" alt=""></a>
           </div>
           <div class="container">
             <div class="lang-wrap">
               <a href="#!" class="lang">عربي</a>
             </div>
             <div class="row">
-              <div class="col-sm-6 col-md-5 col-xl-4 col-xxl-3">
-                <ul class="menu-nav">
+              <div class="col-lg-5 col-xl-4 col-xxl-3">
+                <ul class="menu-nav" id="accordion">
                   <li>
-                    <a href="#!">About Us</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-1">About Us</a>
+                    <ul class="sub-menu collapse" id="collapse-1" data-parent="#accordion">
                       <li><a href="#!">Lorem ipsum</a></li>
                       <li><a href="#!">Lorem ipsum</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#!">Programs</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-2">Programs</a>
+                    <ul class="sub-menu collapse" id="collapse-2" data-parent="#accordion">
                       <li><a href="#!">Lorem ipsum</a></li>
                       <li><a href="#!">Lorem ipsum</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#!">Network</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-3">Network</a>
+                    <ul class="sub-menu collapse" id="collapse-3" data-parent="#accordion">
                       <li><a href="#!">Advisory Committee</a></li>
                       <li><a href="#!">Partners</a></li>
                       <li><a href="#!">Community</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#!">Events</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-4">Events</a>
+                    <ul class="sub-menu collapse" id="collapse-4" data-parent="#accordion">
                       <li><a href="#!">Lorem ipsum</a></li>
                       <li><a href="#!">Lorem ipsum</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#!">Media</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-5">Media</a>
+                    <ul class="sub-menu collapse" id="collapse-5" data-parent="#accordion">
                       <li><a href="#!">Lorem ipsum</a></li>
                       <li><a href="#!">Lorem ipsum</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#!">Contact Us</a>
-                    <ul class="sub-menu">
+                    <a href="#!" data-toggle="collapse" data-target="#collapse-6">Contact Us</a>
+                    <ul class="sub-menu collapse" id="collapse-6" data-parent="#accordion">
                       <li><a href="#!">Lorem ipsum</a></li>
                       <li><a href="#!">Lorem ipsum</a></li>
                     </ul>
@@ -103,7 +103,9 @@
         <section class="section-1">
           <div class="row no-gutters">
             <div class="col-sm-11 col-lg-9">
-              <img src="img/1.jpg" alt="">
+              <div class="img-wrap">
+                <img src="img/1.jpg" alt="">
+              </div>
             </div>
           </div>
           <div class="container">
@@ -116,7 +118,10 @@
               <div class="col-lg-8 col-xl-6">
                 <div class="block">
                   <img src="img/scroll-1.svg" alt="" class="scroll-icon" data-enllax-ratio=".4" data-enllax-type="foreground">
-                  <p class="pb-0 pb-md-3"><img src="img/quote.png" alt="" width="32"></p>
+                  <div class="svg-wrap">
+                    <img src="img/svg-bg.svg" alt="" class="svg" data-enllax-ratio=".05" data-enllax-type="foreground">
+                  </div>
+                  <p class="quote pb-0 pb-md-3"><img src="img/quote.png" alt="" width="32"></p>
                   <p class="fz-24 font-weight-semibold pb-md-3">Your role now, is to prepare yourselves in educational and cultural fields, and set an example for shouldering the responsibilities of the future.</p>
                   <p>- Speech of His Majesty Sultan Qaboos bin Said on the occasion of the 13th National Day to the Youth of Oman</p>
                 </div>
@@ -132,7 +137,7 @@
                 <h2 class="text-center text-xl-left mb-5">Hello <br class="d-none d-xl-block"> Future...</h2>
               </div>
               <div class="col-sm-auto text-center mb-3 pb-3">
-                <img src="img/logo-2.png" alt="" width="142" class="img">
+                <img src="img/logo-2.svg" alt="" width="142" class="img">
               </div>
               <div class="col col-xl-5">
                 <p class="fz-20 font-weight-semibold pb-2">The Diwan of Royal Court Welcomes</p>
@@ -147,7 +152,9 @@
           <div class="container-fluid">
             <div class="row mb-3 pb-3 mb-lg-0 pb-lg-0">
               <div class="col-md-6 col-lg-7 mb-3 mb-md-0">
-                <img src="img/2.jpg" alt="" class="w-100">
+                <div class="img-wrap">
+                  <img src="img/2.jpg" alt="" class="w-100">
+                </div>
               </div>
               <div class="col">
                 <div class="row">
@@ -162,7 +169,9 @@
             </div>
             <div class="row mb-3 pb-3 mb-lg-0 pb-lg-0">
               <div class="col-md-6 col-lg-7 mb-3 mb-md-0 order-md-1">
-                <img src="img/3.jpg" alt="" class="w-100">
+                <div class="img-wrap">
+                  <img src="img/3.jpg" alt="" class="w-100">
+                </div>
               </div>
               <div class="col">
                 <div class="row">
@@ -413,7 +422,9 @@
             <div class="row justify-content-center">
               <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 z-2">
                 <div class="card-my">
-                  <div><img src="img/news-1.jpg" alt="" class="w-100"></div>
+                  <div class="img-wrap">
+                    <img src="img/news-1.jpg" alt="" class="w-100">
+                  </div>
                   <div class="card-my-body">
                     <p class="fz-18 font-weight-semibold text-dark">National Youth Program for Skills Development Launched in Oman.</p>
                     <p class="fz-14 pb-2">August 05, 2018</p>
@@ -425,7 +436,9 @@
               </div>
               <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 z-2">
                 <div class="card-my">
-                  <div><img src="img/news-2.jpg" alt="" class="w-100"></div>
+                  <div class="img-wrap">
+                    <img src="img/news-2.jpg" alt="" class="w-100">
+                  </div>
                   <div class="card-my-body">
                     <p class="fz-18 font-weight-semibold text-dark">Diwan of Royal Court launches the National Youth Program for Skills Development</p>
                     <p class="fz-14 pb-2">May 29, 2018</p>
@@ -437,7 +450,9 @@
               </div>
               <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 z-2">
                 <div class="card-my">
-                  <div><img src="img/news-3.jpg" alt="" class="w-100"></div>
+                  <div class="img-wrap">
+                    <img src="img/news-3.jpg" alt="" class="w-100">
+                  </div>
                   <div class="card-my-body">
                     <p class="fz-18 font-weight-semibold text-dark">Diwan of Royal Court to Announce National Initiative Targeting Youth.</p>
                     <p class="fz-14 pb-2">November 16, 2017</p>
@@ -527,6 +542,9 @@
         </section>
 
         <section class="section-8">
+          <span>
+            <img src="img/instagram.png" alt="" data-enllax-ratio=".2" data-enllax-type="foreground">
+          </span>
           <div class="container relative z-2">
             <h3 class="font-weight-semibold mb-5">#YouthOfOman</h3>
             <div class="owl-4 owl-carousel owl-theme pt-xl-5">
@@ -554,10 +572,10 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-lg-auto mb-3 pb-3">
-              <a href="index.html"><img src="img/logo-3.png" alt=""></a>
+              <a href="index.html"><img src="img/logo-3.svg" alt="" width="199"></a>
             </div>
             <div class="col-sm-6 col-lg-auto text-sm-right mb-3 pb-3 pl-xxl-4">
-              <img src="img/logo-4.png" alt="" width="93">
+              <img src="img/logo-4.svg" alt="" width="93">
             </div>
             <div class="col-6 col-sm-auto ml-lg-auto">
               <ul class="list-unstyled pr-xxl-3">

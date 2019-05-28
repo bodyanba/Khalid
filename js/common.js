@@ -23,17 +23,17 @@ $(document).ready(function () {
     nav: true,
     navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
     onInitialized: function(e) {
-      var index = e.item.index + 1;
+      var index = e.item.index - 1;
       owlIndex.attr("data-index", index);
     },
   });
   owl3.on('changed.owl.carousel', function(e) {
-    var index = e.item.index + 1;
+    var index = e.item.index - 1;
     if (index == 4) {
       index = 1
     } else if (index == 5) {
       index = 2
-    } else if (index == 6) {
+    } else if (index == 6 || index == 0) {
       index = 3
     };
     owlIndex.attr("data-index", index);
