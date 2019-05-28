@@ -643,6 +643,16 @@ h4, .h4 {
     .scroll-icon {
       display: none; } }
 
+.double-svg {
+  position: absolute;
+  bottom: -8px;
+  right: 11px;
+  width: 81%;
+  animation: double linear infinite 3s; }
+
+@keyframes double {
+  50% {
+    bottom: -28px; } }
 .relative {
   position: relative; }
 
