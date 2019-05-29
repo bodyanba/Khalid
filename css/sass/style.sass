@@ -14,14 +14,18 @@ body
 		bottom: 0
 		left: 0
 		transition: $transition
-		background: $color-info url(../img/logo-white.svg) no-repeat center
-		background-size: 500px
+		background-color: $color-info
+		background-image: url(../img/logo-3.svg), url(../img/pace.svg)
+		background-repeat: no-repeat
+		background-position: center center, center bottom
+		background-size: 400px, contain
 		@media (max-width: 991.98px)
-			background-size: 297px
+			background-size: 200px
 	&.menubar-in
 		overflow: hidden
 
 .pace-container
+	overflow: hidden
 	opacity: 0
 	visibility: hidden
 	transition: $transition
@@ -154,13 +158,10 @@ h4, .h4
 		display: none
 .double-svg
 	position: absolute
-	bottom: -8px
-	right: 11px
-	width: 81%
-	animation: double linear infinite 3s
-@keyframes double
-	50%
-		bottom: -28px
+	width: 140px
+.double-svg-2
+	position: absolute
+	width: 152px
 
 .relative
 	position: relative
@@ -546,18 +547,6 @@ h4, .h4
 .section-1
 	padding: 91px 0 244px
 	position: relative
-	// @media (min-width: 1200px)
-	// 	&:before
-	// 		content: ''
-	// 		position: absolute
-	// 		right: 80px
-	// 		top: 130px
-	// 		width: 350px
-	// 		height: 350px
-	// 		border-radius: 50%
-	// 		background-image: url(../img/circle.svg)
-	// 		background-size: cover
-	// 		animation: circle 74s infinite linear
 	.img-wrap	
 		position: relative
 		overflow: hidden
@@ -589,21 +578,6 @@ h4, .h4
 			right: 0
 			bottom: calc(100% + 167px)
 			z-index: -1
-		.svg-wrap
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			left: 0
-			overflow: hidden
-			.svg
-				position: absolute
-				left: 10px
-				top: -20%
-				height: 140%
-				width: auto
-			@media (max-width: 1199.98px)
-				display: none
 		.quote
 			animation: quote linear infinite 8s
 		@media (max-width: 1499.98px)
@@ -628,6 +602,7 @@ h4, .h4
 
 .section-3
 	padding: 100px 0 140px
+	position: relative
 	@media (max-width: 1199.98px)
 		padding: 70px 0
 	.img-wrap	
@@ -670,15 +645,18 @@ h4, .h4
 				@media (min-width: 992px) and (max-width: 1199.98px)
 					padding-top: 40px
 	.scroll-icon
-		right: 0
+		right: 10px
 		top: 208px
 		z-index: -1
-	.scroll-icon-wrap .scroll-icon
+	> .scroll-icon
 		right: auto
-		left: 0
-		top: 104px
+		top: auto
+		left: 20px
+		bottom: 100px
 		z-index: 1
-		
+	.double-svg-2
+		right: -10px
+		top: 252px
 
 .section-4
 	padding: 140px 0
@@ -754,7 +732,7 @@ h4, .h4
 				&:after
 					animation-name: after-2
 	.scroll-icon
-		left: 124px
+		left: 24px
 		bottom: 302px
 	@media (max-width: 1199.98px)
 		padding: 70px 0
@@ -858,21 +836,6 @@ h4, .h4
 			background-size: cover
 			&:hover 
 				opacity: .7
-		&:after
-			content: ''
-			position: absolute
-			width: 183px
-			height: 127px
-			bottom: 0
-			left: 0
-			background-image: url(../img/svg-white.svg)
-			background-size: cover
-			transition: $transition
-			animation: hover 30s infinite linear
-			opacity: 0
-		&:hover 
-			&:after
-				opacity: 1
 		&.video
 			&:before
 				content: ''
@@ -883,13 +846,6 @@ h4, .h4
 				left: 0
 				background-color: #000
 				opacity: .2
-			&:after
-				width: 117px
-				height: 105px
-				left: auto
-				right: 10px
-				background-image: url(../img/scroll-2.svg)
-				animation: none
 @keyframes hover
 	50%
 		left: -50px
@@ -1030,6 +986,8 @@ h4, .h4
 		padding: 70px 0
 	.scroll-icon
 		left: 53px
+	.double-svg
+		left: 76px !important
 	@media (min-width: 1200px)
 		&:before
 			content: ''
@@ -1061,7 +1019,6 @@ h4, .h4
 			background-repeat: no-repeat
 			background-position: center bottom
 			transition: $transition
-			opacity: 0
 	.card-my-body
 		padding: 40px
 		flex-grow: 1
@@ -1072,10 +1029,6 @@ h4, .h4
 	&:hover 
 		transform: translateY(-10px)
 		box-shadow: 0 5px 10px rgba(0, 0, 0, .05)
-		.img-wrap
-			position: relative
-			&:after 
-				opacity: 1
 
 .section-7
 	padding: 140px 0
@@ -1085,6 +1038,8 @@ h4, .h4
 		background-size: 200px
 	@media (min-width: 1500px)
 		background-size: 300px
+	@media (max-width: 1199.98px)
+		padding: 70px 0
 	.row:not(.no-gutters)
 		margin-left: -8px
 		margin-right: -8px
@@ -1096,8 +1051,12 @@ h4, .h4
 	> .scroll-icon
 		left: 55px
 		bottom: 99px
-	@media (max-width: 1199.98px)
-		padding: 70px 0
+	.double-svg
+		bottom: 88px !important
+		left: 78px !important
+	.double-svg-2
+		right: -10px !important
+		top: 44px
 
 .icon-2
 	height: 70px

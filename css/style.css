@@ -15,15 +15,19 @@ body {
     bottom: 0;
     left: 0;
     transition: 0.3s;
-    background: #6cc8bf url(../img/logo-white.svg) no-repeat center;
-    background-size: 500px; }
+    background-color: #6cc8bf;
+    background-image: url(../img/logo-3.svg), url(../img/pace.svg);
+    background-repeat: no-repeat;
+    background-position: center center, center bottom;
+    background-size: 400px, contain; }
     @media (max-width: 991.98px) {
       body:before {
-        background-size: 297px; } }
+        background-size: 200px; } }
   body.menubar-in {
     overflow: hidden; }
 
 .pace-container {
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s; }
@@ -645,14 +649,12 @@ h4, .h4 {
 
 .double-svg {
   position: absolute;
-  bottom: -8px;
-  right: 11px;
-  width: 81%;
-  animation: double linear infinite 3s; }
+  width: 140px; }
 
-@keyframes double {
-  50% {
-    bottom: -28px; } }
+.double-svg-2 {
+  position: absolute;
+  width: 152px; }
+
 .relative {
   position: relative; }
 
@@ -1074,22 +1076,6 @@ h4, .h4 {
       right: 0;
       bottom: calc(100% + 167px);
       z-index: -1; }
-    .section-1 .block .svg-wrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      overflow: hidden; }
-      .section-1 .block .svg-wrap .svg {
-        position: absolute;
-        left: 10px;
-        top: -20%;
-        height: 140%;
-        width: auto; }
-      @media (max-width: 1199.98px) {
-        .section-1 .block .svg-wrap {
-          display: none; } }
     .section-1 .block .quote {
       animation: quote linear infinite 8s; }
     @media (max-width: 1499.98px) {
@@ -1119,7 +1105,8 @@ h4, .h4 {
   50% {
     transform: translateX(10px); } }
 .section-3 {
-  padding: 100px 0 140px; }
+  padding: 100px 0 140px;
+  position: relative; }
   @media (max-width: 1199.98px) {
     .section-3 {
       padding: 70px 0; } }
@@ -1163,14 +1150,18 @@ h4, .h4 {
     .section-3 .container-fluid > .row > .col {
       padding-top: 40px; } }
   .section-3 .scroll-icon {
-    right: 0;
+    right: 10px;
     top: 208px;
     z-index: -1; }
-  .section-3 .scroll-icon-wrap .scroll-icon {
+  .section-3 > .scroll-icon {
     right: auto;
-    left: 0;
-    top: 104px;
+    top: auto;
+    left: 20px;
+    bottom: 100px;
     z-index: 1; }
+  .section-3 .double-svg-2 {
+    right: -10px;
+    top: 252px; }
 
 .section-4 {
   padding: 140px 0;
@@ -1250,7 +1241,7 @@ h4, .h4 {
         .section-4 .block-sm-wrap .block-sm + .block-sm:after {
           animation-name: after-2; }
   .section-4 .scroll-icon {
-    left: 124px;
+    left: 24px;
     bottom: 302px; }
   @media (max-width: 1199.98px) {
     .section-4 {
@@ -1360,20 +1351,6 @@ h4, .h4 {
     background-size: cover; }
     .gallery .photo .play:hover {
       opacity: 0.7; }
-  .gallery .photo:after {
-    content: "";
-    position: absolute;
-    width: 183px;
-    height: 127px;
-    bottom: 0;
-    left: 0;
-    background-image: url(../img/svg-white.svg);
-    background-size: cover;
-    transition: 0.3s;
-    animation: hover 30s infinite linear;
-    opacity: 0; }
-  .gallery .photo:hover:after {
-    opacity: 1; }
   .gallery .photo.video:before {
     content: "";
     position: absolute;
@@ -1383,13 +1360,6 @@ h4, .h4 {
     left: 0;
     background-color: #000;
     opacity: 0.2; }
-  .gallery .photo.video:after {
-    width: 117px;
-    height: 105px;
-    left: auto;
-    right: 10px;
-    background-image: url(../img/scroll-2.svg);
-    animation: none; }
 
 @keyframes hover {
   50% {
@@ -1531,6 +1501,8 @@ h4, .h4 {
       padding: 70px 0; } }
   .section-6 .scroll-icon {
     left: 53px; }
+  .section-6 .double-svg {
+    left: 76px !important; }
   @media (min-width: 1200px) {
     .section-6:before {
       content: "";
@@ -1561,8 +1533,7 @@ h4, .h4 {
       background-image: url(../img/svg-white-2.svg);
       background-repeat: no-repeat;
       background-position: center bottom;
-      transition: 0.3s;
-      opacity: 0; }
+      transition: 0.3s; }
   .card-my .card-my-body {
     padding: 40px;
     flex-grow: 1;
@@ -1574,10 +1545,6 @@ h4, .h4 {
   .card-my:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); }
-    .card-my:hover .img-wrap {
-      position: relative; }
-      .card-my:hover .img-wrap:after {
-        opacity: 1; }
 
 .section-7 {
   padding: 140px 0;
@@ -1589,6 +1556,9 @@ h4, .h4 {
   @media (min-width: 1500px) {
     .section-7 {
       background-size: 300px; } }
+  @media (max-width: 1199.98px) {
+    .section-7 {
+      padding: 70px 0; } }
   .section-7 .row:not(.no-gutters) {
     margin-left: -8px;
     margin-right: -8px; }
@@ -1600,9 +1570,12 @@ h4, .h4 {
   .section-7 > .scroll-icon {
     left: 55px;
     bottom: 99px; }
-  @media (max-width: 1199.98px) {
-    .section-7 {
-      padding: 70px 0; } }
+  .section-7 .double-svg {
+    bottom: 88px !important;
+    left: 78px !important; }
+  .section-7 .double-svg-2 {
+    right: -10px !important;
+    top: 44px; }
 
 .icon-2 {
   height: 70px;
