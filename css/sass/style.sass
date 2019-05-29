@@ -18,9 +18,10 @@ body
 		background-image: url(../img/logo-3.svg), url(../img/pace.svg)
 		background-repeat: no-repeat
 		background-position: center center, center bottom
-		background-size: 400px, contain
+		background-size: 400px, auto
+		z-index: 9999
 		@media (max-width: 991.98px)
-			background-size: 200px
+			background-size: 200px, auto
 	&.menubar-in
 		overflow: hidden
 
@@ -158,7 +159,13 @@ h4, .h4
 		display: none
 .double-svg
 	position: absolute
-	width: 140px
+	bottom: -8px
+	right: 11px
+	width: 81%
+	animation: double linear infinite 4s
+@keyframes double
+	50%
+		bottom: -58px
 .double-svg-2
 	position: absolute
 	width: 152px
@@ -986,8 +993,6 @@ h4, .h4
 		padding: 70px 0
 	.scroll-icon
 		left: 53px
-	.double-svg
-		left: 76px !important
 	@media (min-width: 1200px)
 		&:before
 			content: ''
@@ -1019,6 +1024,8 @@ h4, .h4
 			background-repeat: no-repeat
 			background-position: center bottom
 			transition: $transition
+			opacity: 0
+			transform: translateY(10px)
 	.card-my-body
 		padding: 40px
 		flex-grow: 1
@@ -1029,6 +1036,10 @@ h4, .h4
 	&:hover 
 		transform: translateY(-10px)
 		box-shadow: 0 5px 10px rgba(0, 0, 0, .05)
+		.img-wrap
+			&:after 
+				opacity: 1
+				transform: none
 
 .section-7
 	padding: 140px 0
@@ -1051,9 +1062,6 @@ h4, .h4
 	> .scroll-icon
 		left: 55px
 		bottom: 99px
-	.double-svg
-		bottom: 88px !important
-		left: 78px !important
 	.double-svg-2
 		right: -10px !important
 		top: 44px

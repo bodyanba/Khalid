@@ -19,10 +19,11 @@ body {
     background-image: url(../img/logo-3.svg), url(../img/pace.svg);
     background-repeat: no-repeat;
     background-position: center center, center bottom;
-    background-size: 400px, contain; }
+    background-size: 400px, auto;
+    z-index: 9999; }
     @media (max-width: 991.98px) {
       body:before {
-        background-size: 200px; } }
+        background-size: 200px, auto; } }
   body.menubar-in {
     overflow: hidden; }
 
@@ -649,8 +650,14 @@ h4, .h4 {
 
 .double-svg {
   position: absolute;
-  width: 140px; }
+  bottom: -8px;
+  right: 11px;
+  width: 81%;
+  animation: double linear infinite 4s; }
 
+@keyframes double {
+  50% {
+    bottom: -58px; } }
 .double-svg-2 {
   position: absolute;
   width: 152px; }
@@ -1501,8 +1508,6 @@ h4, .h4 {
       padding: 70px 0; } }
   .section-6 .scroll-icon {
     left: 53px; }
-  .section-6 .double-svg {
-    left: 76px !important; }
   @media (min-width: 1200px) {
     .section-6:before {
       content: "";
@@ -1533,7 +1538,9 @@ h4, .h4 {
       background-image: url(../img/svg-white-2.svg);
       background-repeat: no-repeat;
       background-position: center bottom;
-      transition: 0.3s; }
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateY(10px); }
   .card-my .card-my-body {
     padding: 40px;
     flex-grow: 1;
@@ -1545,6 +1552,9 @@ h4, .h4 {
   .card-my:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); }
+    .card-my:hover .img-wrap:after {
+      opacity: 1;
+      transform: none; }
 
 .section-7 {
   padding: 140px 0;
@@ -1570,9 +1580,6 @@ h4, .h4 {
   .section-7 > .scroll-icon {
     left: 55px;
     bottom: 99px; }
-  .section-7 .double-svg {
-    bottom: 88px !important;
-    left: 78px !important; }
   .section-7 .double-svg-2 {
     right: -10px !important;
     top: 44px; }
